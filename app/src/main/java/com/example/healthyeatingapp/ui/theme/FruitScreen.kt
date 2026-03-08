@@ -19,7 +19,7 @@ import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import com.example.healthyeatingapp.viewmodel.FruitViewModel
-
+// Main UI screen allowing users to search and view fruit nutrition
 @Composable
 fun FruitScreen(viewModel: FruitViewModel) {
     var searchText by remember { mutableStateOf("") }
@@ -43,7 +43,7 @@ fun FruitScreen(viewModel: FruitViewModel) {
         )
 
         Spacer(modifier = Modifier.height(12.dp))
-
+// Trigger fruit search when button is pressed
         Button(
             onClick = { viewModel.searchFruit(searchText) },
             modifier = Modifier.fillMaxWidth()
@@ -56,7 +56,7 @@ fun FruitScreen(viewModel: FruitViewModel) {
         viewModel.errorMessage.value?.let { error ->
             Text(error)
         }
-
+// Display fruit nutrition information
         viewModel.fruit.value?.let { fruit ->
             Card(
                 modifier = Modifier.fillMaxWidth()

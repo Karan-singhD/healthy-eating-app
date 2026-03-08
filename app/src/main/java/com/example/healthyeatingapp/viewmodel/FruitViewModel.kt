@@ -1,12 +1,12 @@
 package com.example.healthyeatingapp.viewmodel
-
+// ViewModel responsible for handling fruit search logic and API calls
 import androidx.compose.runtime.mutableStateOf
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.example.healthyeatingapp.api.RetrofitInstance
 import com.example.healthyeatingapp.data.Fruit
 import kotlinx.coroutines.launch
-
+// Calls the API and updates UI state with the result
 class FruitViewModel : ViewModel() {
 
     var fruit = mutableStateOf<Fruit?>(null)

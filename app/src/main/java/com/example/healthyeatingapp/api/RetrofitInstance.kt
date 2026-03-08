@@ -2,7 +2,7 @@ package com.example.healthyeatingapp.api
 
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
-
+//  provides the Retrofit API instance
 object RetrofitInstance {
     val api: FruitApi by lazy {
         Retrofit.Builder()
